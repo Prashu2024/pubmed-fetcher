@@ -1,10 +1,22 @@
 [tool.poetry]
-name = "pubmed_fetcher"
+name = "prashu-pubmed-fetcher"
 version = "0.1.0"
 description = "A tool to fetch and filter research papers from PubMed with pharmaceutical/biotech company affiliations"
 authors = ["Prashant Gupta <prashant10gpt@gmail.com>"]
 readme = "README.md"
 packages = [{include = "pubmed_fetcher", from = "src"}]
+license = "MIT"
+repository = "https://github.com/Prashu2024/pubmed-fetcher"
+keywords = ["pubmed", "research", "papers", "biotech", "pharmaceutical"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"

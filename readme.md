@@ -14,6 +14,13 @@ A Python tool to fetch research papers from PubMed and identify those with autho
 
 ## Installation
 
+### From Test PyPI
+```bash
+# Install the package from Test PyPI while getting dependencies from main PyPI
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple prashu-pubmed-fetcher
+```
+
+### From Source
 1. Clone the repository:
 ```bash
 git clone https://github.com/Prashu2024/pubmed-fetcher.git
@@ -32,7 +39,22 @@ poetry install
 
 ## Usage
 
-The tool provides a command-line interface through the `get-papers-list` command. After installation, you can use it directly through Poetry:
+### If installed from Test PyPI
+After installing with pip, you can use the command directly:
+
+```bash
+# Basic usage (prints to console)
+get-papers-list "cancer immunotherapy"
+
+# Enable debug logging
+get-papers-list "cancer immunotherapy" -d
+
+# Save results to a file
+get-papers-list "cancer immunotherapy" -f results.csv
+```
+
+### If installed from source with Poetry
+If you installed from source using Poetry, prefix the commands with `poetry run`:
 
 ```bash
 # Basic usage (prints to console)
@@ -125,3 +147,12 @@ poetry run isort src/pubmed_fetcher tests
 - [isort](https://pycqa.github.io/isort/): Import sorting
 - [Pytest](https://docs.pytest.org/): Testing framework
 
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+# Add Test PyPI as a repository
+poetry config repositories.testpypi https://test.pypi.org/legacy/
+
+# Configure your API token (you'll need to get this from your Test PyPI account settings)
+poetry config pypi-token.testpypi YOUR_TEST_PYPI_TOKEN
