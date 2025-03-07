@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "pubmed_fetcher"
+version = "0.1.0"
+description = "A tool to fetch and filter research papers from PubMed with pharmaceutical/biotech company affiliations"
+authors = ["Prashant Gupta <prashant10gpt@gmail.com>"]
+readme = "README.md"
+packages = [{include = "pubmed_fetcher", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.31.0"
+beautifulsoup4 = "^4.12.2"
+lxml = "^4.9.3"
+rich = "^13.5.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+black = "^23.7.0"
+mypy = "^1.5.1"
+isort = "^5.12.0"
+types-requests = "^2.32.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+get-papers-list = "pubmed_fetcher.cli:main"
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
