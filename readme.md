@@ -125,6 +125,3 @@ poetry run isort src/pubmed_fetcher tests
 - [isort](https://pycqa.github.io/isort/): Import sorting
 - [Pytest](https://docs.pytest.org/): Testing framework
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
