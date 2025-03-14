@@ -151,8 +151,8 @@ poetry run isort src/pubmed_fetcher tests
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-# Add Test PyPI as a repository
+## Add Test PyPI as a repository
 poetry config repositories.testpypi https://test.pypi.org/legacy/
 
-# Configure your API token (you'll need to get this from your Test PyPI account settings)
+## Configure your API token (you'll need to get this from your Test PyPI account settings)
 poetry config pypi-token.testpypi YOUR_TEST_PYPI_TOKEN
